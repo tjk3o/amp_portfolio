@@ -40,6 +40,7 @@
         background-color: gray;
         border: 1px solid black;
       }
+      /* Styles for page hero */
       .profile-pic {
         margin: 0 auto;
         border-radius: 50%;
@@ -53,6 +54,19 @@
       .profile-card {
         padding-top: 120px;
       }
+      .profile-card h1 {
+          font-size: 40px;
+          font-weight: 100;
+          color: #525252;
+      }
+      .profile-card h2 {
+        color: #525252;
+        font-size: 20px;
+        margin-bottom: 120px;
+        font-weight: 100;
+      }
+
+      /* Navbar styles */
       nav {
       top: 0;
       position: -webkit-sticky;
@@ -69,21 +83,23 @@
         height: 80px;
         width: 100%;
       }
-      ul {
+      .navbar-items ul {
         width: 300px;
         margin: 0 auto;
         -webkit-padding-start: 0;
       }
-      li {
+      .navbar-items ul li {
         display: inline-block;
         padding-left: 22px;
         padding-right: 22px;
       }
-      a {
+      .navbar-items ul li a {
         font-size: 16px;
         color: #525252;
         text-decoration: none;
       }
+
+      /* Bio section */
       #about {
         width: 100%;
         height: auto;
@@ -97,16 +113,10 @@
         height: auto;
         margin: 0 auto;
         padding: 100px;
-        @include for-mobile {
-          padding: 0;
-          padding-top: 80px;
-          padding-bottom: 80px;
-        }
       }
-      p {
+      .personal-bio p {
         color: #808080;
         line-height: 1.8em;
-      }
       }
     </style>
   </head>
