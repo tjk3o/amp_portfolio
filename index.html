@@ -19,6 +19,7 @@
       }
     </script>
     <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
 
     <style amp-boilerplate>
       body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
@@ -176,9 +177,14 @@
         width: 45%;
         margin: 2.5%;
         background-color: dodgerblue;
-        height: auto;
       }
-      
+      .project-desc-closed {
+        height: 100px;
+      }
+      .project-desc-open {
+        height: 500px;
+        
+      }
 
       /* contact section */
       #contact {
@@ -384,37 +390,59 @@
               <amp-anim
               width=600
               height=314
-              src="https://i.imgur.com/TIbFDNS.gif"
+              src="https://i.imgur.com/B9rIig7.gif"
               layout="responsive"
+              role="button"
+              tabindex="1"
+              on="tap:AMP.setState({visible: !visible})"
               ></amp-anim>
+              <div
+              [class]="visible ? 'project-desc-open' : 'project-desc-closed'"
+              class="project-desc-closed"              
+              >
+                selfridges
+              </div>
             </div>
           <div class="project">
             <amp-anim
               width=600
               height=314
-              src="https://i.imgur.com/TIbFDNS.gif"
+              src="http://www.tomkeogh.co.uk/images/content.gif"
+              layout="responsive"
+              ></amp-anim>
+              <div class="project-desc projects-wdi4">
+                project 4
+              </div>
+            </div>
+            <div class="project">
+              <amp-anim
+              width=600
+              height=314
+              src="http://www.tomkeogh.co.uk/images/crave.gif"
               layout="responsive"></amp-anim>
-          </div>
-          <div id="projects-wdi2" class="project">
-            <amp-anim
+              <div class="project-desc projects-wdi3">
+                project 3
+              </div>
+            </div>
+            <div class="project">
+              <amp-anim
+              width=600
+              height=314
+              src="http://www.tomkeogh.co.uk/images/tomstagram.gif"
+              layout="responsive"></amp-anim>
+              <div class="project-desc projects-wdi2">
+                project 2
+              </div>
+            </div>
+            <div id="projects-wdi4" class="project">
+              <amp-anim
               width=600
               height=314
               src="https://i.imgur.com/TIbFDNS.gif"
               layout="responsive"></amp-anim>
-          </div>
-          <div id="projects-wdi3" class="project">
-            <amp-anim
-              width=600
-              height=314
-              src="https://i.imgur.com/TIbFDNS.gif"
-              layout="responsive"></amp-anim>
-          </div>
-          <div id="projects-wdi4" class="project">
-            <amp-anim
-              width=600
-              height=314
-              src="https://i.imgur.com/TIbFDNS.gif"
-              layout="responsive"></amp-anim>
+              <div class="project-desc projects-wdi1">
+                project 1
+              </div>
           </div>
         </article>
 
